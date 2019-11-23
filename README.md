@@ -7,9 +7,13 @@ The comand bellow will add the latest jest to the package.json devDependencies b
 
     npm install jest --dev 
 
-Add the comand to the package.json scripts block to test the code. Coverage is to expand the jest response.
+Add the comand to the package.json scripts block to test the code. 
 
-    "test": "jest --coverage"
+'--coverage' is to expand the jest response. 
+
+'--watch all' is for jest to run all the time
+
+    "test": "jest --coverage --watchAll"
 
 
 # Add REST CRUD methods
