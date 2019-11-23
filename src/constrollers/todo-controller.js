@@ -1,4 +1,8 @@
-function createTodo(){
+class ToDo {
+    createTodo(){
+    }
 }
+
 module.exports = {
-    createTodo};
+    "toDo":ToDo
+};
