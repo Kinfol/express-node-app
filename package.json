@@ -9,11 +9,14 @@
   "devDependencies": {
     "jest": "^24.9.0"
   },
+  "jest": {
+    "testEnvironment": "node"
+  },
   "main": "index.js",
   "scripts": {
     "test": "jest --coverage"
   },
-  "directories":{
+  "directories": {
     "test": "test"
   },
   "keywords": [],
