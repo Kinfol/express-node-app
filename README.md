@@ -32,7 +32,13 @@ JSON defines 7 value types
 
     string, number, object, array, true, false, and null
 
-    
+# Middleware - Request Response Next
+
+HTTP request argument to the middleware function, called "req" by convention.
+
+HTTP response argument to the middleware function, called "res" by convention.
+
+Callback argument to the middleware function, called "next" by convention. 
 
    
 # Add REST CRUD methods
