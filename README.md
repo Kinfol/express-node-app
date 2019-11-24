@@ -15,7 +15,26 @@ Add the comand to the package.json scripts block to test the code.
 
     "test": "jest --coverage --watchAll"
 
+# src/model
 
+The module model holds the Data Schema. In our case represented by MongoDB. 
+
+    mongose is an Object modeling tool for MongoDB
+
+MongoDB stores documents in BSON, which is the binary encoded format for JSON.
+
+JSON defines only two data structures. Objects and arrays.
+
+    object => a set of name-value
+    array => list of values
+
+JSON defines 7 value types
+
+    string, number, object, array, true, false, and null
+
+    
+
+   
 # Add REST CRUD methods
 
 - Create HTTP POST
