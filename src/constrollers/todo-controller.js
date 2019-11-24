@@ -2,8 +2,8 @@ const TodoModel = require ('../model/todo-model')
 
 
 class ToDo {
-    createTodo(){
-        return TodoModel.create();
+    createTodo(req, res, next){
+        return TodoModel.create(req.body);
     }
 
 }
