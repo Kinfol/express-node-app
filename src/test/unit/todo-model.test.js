@@ -37,12 +37,12 @@ describe("TodoController.createTodo", () => {
     //instantiating the todo-controller class
     //calling the method from the class.
     expect(TodoModel.create).toBeCalledWith(newTodo);
-    
+
   });
   it("should return 201 response code", () => {
     // p1.createTodo(req, res, next);
     expect(res.statusCode).toBe(201);
-    // expect(res._isEndCalled()).toBeTruthy();
+    expect(res._isEndCalled()).toBeTruthy();
    });
 })
 
