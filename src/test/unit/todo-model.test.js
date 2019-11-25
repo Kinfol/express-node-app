@@ -22,7 +22,7 @@ describe("TodoController.createTodo", () => {
     req.body = newTodo;
     const p1 = new TodoController.toDo()
     p1.createTodo(req, res, next);
-    p1.createResponse(req, res, next)
+    p1.createRecord(req, res, next)
   });
 
   it("should have a createTodo function", () => {
