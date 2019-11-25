@@ -9,7 +9,7 @@ class ToDo {
 
     createRecord(req, res, next){
         //response 201 = Created
-        res.status(201);
+        res.status(201).send();
     }
 
 }
