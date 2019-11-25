@@ -7,8 +7,7 @@ class ToDo {
         
     }
 
-    createRecord(req, res, next){
-        //response 201 = Created
+    createResponse(req, res, next){
         res.status(201).send();
     }
 

@@ -20,9 +20,6 @@ describe("TodoController.createTodo", () => {
   // dependencies for it steps 
   beforeEach(() => {
     req.body = newTodo;
-    const p1 = new TodoController.toDo()
-    p1.createTodo(req, res, next);
-    p1.createRecord(req, res, next)
   });
 
   it("should have a createTodo function", () => {
@@ -36,19 +33,25 @@ describe("TodoController.createTodo", () => {
   it("should call TodoModel.create", () => {
     //instantiating the todo-controller class
     //calling the method from the class.
+    const ct = new TodoController.toDo()
+    ct.createTodo(req, res, next);
     expect(TodoModel.create).toBeCalledWith(newTodo);
-
+    
   });
   it("should return 201 response code", () => {
     // p1.createTodo(req, res, next);
+    const cr = new TodoController.toDo()
+    cr.createResponse(req, res, next)
     expect(res.statusCode).toBe(201);
     expect(res._isEndCalled()).toBeTruthy();
-   });
+  });
 
-   it("should return json body in response", () => {
-     TodoModel.create.mockReturnValue(newTodo);
-     expect(res.getJsonData()).toBe(newTodo);
-   })
+  it("should return json body in response", () => {
+    TodoModel.create.mockReturnValue(newTodo);
+    const cr = new TodoController.toDo()
+    cr.createResponse(req, res, next)
+    expect(res._getJSONData()).toStrictEqual(newTodo);
+  });
 })
 
 
